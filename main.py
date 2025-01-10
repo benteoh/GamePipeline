@@ -8,7 +8,6 @@ from pipeline.evaluator import Evaluator
 
 # Todos:
 # reduce episodes,
-# policy gradient agent
 
 def main():
     game = TicTacToe()
@@ -27,7 +26,7 @@ def main():
     # Check qvalues
     q_values = list(agent1.q_table.values())
     # print(q_values)
-    print(f"Agent 1: Number of unlearned states: {q_values} out of {len(q_values)}")
+    print(f"Agent 1: Number of unlearned states: {q_values.count(0)} out of {len(q_values)}")
 
     q_values = list(agent2.q_table.values())
     # print(q_values)
